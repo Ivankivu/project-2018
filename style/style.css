@@ -1,0 +1,221 @@
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #62029d;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+div.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 620px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+img.logo {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+div.clearfix {
+    clear: both;
+}
+
+div.frame {
+    padding: 0px 15px 0px 30px;
+    margin: 0px 0px;
+    float: left;
+    width: 270px;
+    display: none;
+}
+
+div.frame.small {
+    width: 220px;
+    height: 220px;
+    font-size: 14px;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: #B0B0B0;
+    padding: 0px;
+}
+
+div.inner {
+    padding: 0px 30px 0px 15px;
+}
+
+div.inner.loginBox {
+    height: 130px;
+}
+
+div.mainArea {
+    height: 300px;
+}
+
+div.frame div#chat {
+    display: none;
+}
+
+div.clearfix {
+    clear: both;
+}
+
+div#bottomFade {
+    width: 100%;
+    height: 75px;
+    bottom: 0px;
+    position: absolute;
+    z-index: 100;
+    background: linear-gradient(rgba(255, 255, 255, 0), #FFF);
+}
+
+div.me #pointer {
+    width: 10px;
+    height: 10px;
+    position: relative;
+    float: right;
+    clear: both;
+    margin-bottom: -10px;
+    background-color: #62029d;
+    -ms-transform: matrix(0.4525, 0.9616, -0.4525, 0.9616, -20, -5);
+    /* IE 9 */
+    -webkit-transform: matrix(0.4525, 0.9616, -0.4525, 0.9616, -20, -5);
+    /* Chrome, Safari, Opera */
+    transform: matrix(0.4525, 0.9616, -0.4525, 0.9616, -20, -5);
+}
+
+div.error {
+    background-color: pink;
+    border-radius: 3px;
+    display: none;
+    margin-top: 5px;
+    padding: 5px;
+}
+#userForm button{
+    margin-top:50px;
+    color: #fff;
+    background-color: #63029C;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-radius: 0;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: none;
+    outline: 0 none;
+    padding: 5px 5px 5px 5px;
+    margin: 2px;
+}
+form#userForm {
+    display: none;
+}
+
+input {
+    width: 90%;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px 0px;
+    border: 1px solid #B0B0B0;
+    height: 38px;
+    font-size: 14px;
+}
+
+input#callUserName {
+    width: 99%;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px 0px;
+    border: 1px solid #B0B0B0;
+    height: 38px;
+    font-size: 14px;
+}
+
+*:focus {
+    outline: 0;
+}
+#userInfo button {
+    color: #fff;
+    background-color: #63029C;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-radius: 0;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    border: none;
+    outline: 0 none;
+    padding: 5px 5px 5px 5px;
+    margin: 2px;
+}
+#webcallbtn{
+    display: inline;
+}
+#webcallbtn button {
+    background-color: #63029C;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+    margin:2px;
+    outline: 0 none;
+    padding: 5px 5px 5px 5px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+}
+
+div#userInfo {
+    font-size: 14px;
+    display: none;
+}
+
+span#username {}
+
+div.frame div#call {
+    display: none;
+}
+
+div#callLog {
+    font-size: 12px;
+}
+
+div#callLog #title {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+div#callLog #stats {
+    margin-left: 20px;
+}
+
+button#call.incall {
+    background-color: #d9bfe9;
+}
+
+button#call.callwaiting {
+    background-color: #d9bfe9;
+}
+
+button#hangup {
+    background-color: #d9bfe9;
+}
+
+button#hangup.incall {
+    background-color: #62029d;
+}
+
+button#answer {
+    background-color: #d9bfe9;
+}
+
+button#answer.callwaiting {
+    background-color: #62029d;
+}
+
+form#newCall button {
+    float: right;
+}

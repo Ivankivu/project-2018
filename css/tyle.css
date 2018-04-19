@@ -1,0 +1,31 @@
+/*
+ * Custom css
+ *
+ * Created on : 2018-03-21
+ * Author     : Ivan Kivumbi, 15/UG/1093/BIT-S
+ * Copyright  : FST/009 
+ */
+
+.nav.md-pills {
+    width: 100px;
+    height:100%;
+}
+
+.nav-item {
+    height: 100px;
+    width: 100px;
+}
+
+.nav-item a {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.nav-item a i {
+    padding: 5px;
+    font-size: 15px;
+}
+
+.w-auto {
+    width: auto;
+}
