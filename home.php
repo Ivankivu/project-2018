@@ -71,17 +71,19 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 <script src="js/sinch.min.js"></script>
 </head>
 
-<body style="overflow:hidden;">
+<body style="overflow:hidden;height:100%;">
+<div class="row" style="top:0;height:7%;">
 <!--Navbar-->
 <?php
     include 'navbar.php';
 ?>
 <!--/.Navbar-->
-
+    </div>
+<div class="row" style="height:93%;z-index:300px;">
  <?php
     include 'content.php';
 ?>   
-    
+  </div>  
 <?php
     include 'scripts.php';
 ?>

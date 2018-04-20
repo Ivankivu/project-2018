@@ -1,21 +1,12 @@
 
 <div class="container-fluid"> 
 <!--Navbar-->
-<nav class="navbar navbar-fixed navbar-light primary-color col-md-12" style="position:absolute;">
+<nav class="navbar navbar-fixed navbar-light warning-color col-md-12" style="position:absolute;top:0;">
 
     <!-- Navbar brand -->
     <a class="navbar-brand" href="#">ETARS</a>
-
-    <!-- Collapse button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="basicExampleNav">
-     
- <ul class="nav navbar-nav" style="float:right;">
+     <div class="pull-right">
+ <ul class="nav navbar-nav">
             
             <li class="dropdown" >
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -26,8 +17,9 @@
               </ul>
             </li>
           </ul>
+        
     </div>
-    <!-- Collapsible content -->
+   
 
 <div class="row clock">
       <div class="hours"></div><!--

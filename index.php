@@ -46,12 +46,12 @@ if (isset($_SESSION['user_session'])!="") {
         </div>
         
         <div class="md-form form-group">
-        <input type="email" class="form-control" placeholder="" name="user_email" id="user_email" />
+        <input type="email" class="form-control" placeholder="email" name="user_email" id="user_email" />
         <span id="check-e"></span>
         </div>
         
         <div class="md-form form-group">
-        <input type="password" class="form-control" placeholder="" name="password" id="password" />
+        <input type="password" class="form-control" placeholder="password" name="password" id="password" />
         </div>
        
      	<hr />
