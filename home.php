@@ -18,6 +18,7 @@ $stmt = $db_con->prepare("SELECT * FROM tbl_users WHERE user_id=:uid");
 $stmt->execute(array(":uid"=>$_SESSION['user_session']));
 $row=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +32,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 <link rel="stylesheet" href="style/style.css">
 <link href="dash.css" rel="stylesheet" media="screen">
 <link rel="stylesheet" href="css/mdb.min.css">
-
+<link rel="stylesheet" href="css/propic.css">
 
 
 <!--sample-->
@@ -72,7 +73,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
 </head>
 
 <body style="overflow:hidden;height:100%;">
-<div class="row" style="top:0;height:7%;">
+<div class="row" style="top:0;height:7%">
 <!--Navbar-->
 <?php
     include 'navbar.php';
@@ -84,6 +85,34 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     include 'content.php';
 ?>   
   </div>  
+  <div id="profile-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header text-center">
+                <h2 class="modal-title form-signin-heading">
+                    <i class="fa fa-user"></i>User Profile
+                </h2> 
+                <div data-dismiss="modal" style="float:right;">x</div>
+            </div>
+            <div class="modal-body">
+
+<?php
+                include 'User.php';
+                ?>
+          
+           </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit" >
+    		<span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account
+			</button> 
+            </div>
+
+        </div>
+    </div>
+</div>
+                       <!-- /.modal -->    
+                 
 <?php
     include 'scripts.php';
 ?>

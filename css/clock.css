@@ -6,14 +6,17 @@
 }
 
 .clock {
+    z-index: auto;
+    background-color:black;
     height: 50px;
     left: 40%;
     position: absolute;
-    top: 3px;
+    top: 10px;
     width: 300px;
+    opacity: 0.4
 }
 
-.clock div {
+.clock div {color:#fff;
     display: inline-block;
     height: 70%;
     margin-top: 15px;

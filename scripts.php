@@ -24,6 +24,8 @@
             $('#myTab a[href="' + hash + '"]').tab('show');
         });
     </script>
+    
+    
     <!--Google Maps-->
     <script>
         // Note: This example requires that you consent to location sharing when
@@ -76,30 +78,6 @@
     </script>
 
     <script>
-        $(document).ready(function() {
-            // Initialize Material Select
-            $('select').material_select();
-        });
-
-        $('#update').on('click', function() {
-            // This will select 2nd option
-            $('.select-dropdown li:eq( 2 )').trigger('click');
-        });
-        $('.datepicker').pickadate({
-            disable: [{
-                from: [1900, 1, 1],
-                to: [2016, 2, 27]
-            }]
-        });
-
-        $('.ticker').jTicker({
-            // Default options
-            duration: 50, // speed
-            loop: 1, // loops
-            effect: '' // animation type
-        });
-    </script>
-    <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-36251023-1']);
         _gaq.push(['_setDomainName', 'jqueryscript.net']);
@@ -115,6 +93,8 @@
         })();
     </script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
+    
+    <!--clock script-->
     <script>
     
     var $document = $(document);
@@ -147,8 +127,6 @@
 })();
     
     </script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="js/jquery.min.js "></script>
     <!-- Bootstrap tooltips -->
     <script src="js/popper.min.js "></script>
@@ -156,4 +134,3 @@
     <script src="js/bootstrap.min.js "></script>
     <!-- MDB core JavaScript -->
     <script src="js/mdb.min.js "></script>
-    <script src="js/bootstrap.min.js"></script>

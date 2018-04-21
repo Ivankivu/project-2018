@@ -18,14 +18,41 @@
 
 .nav-item a {
     font-size: 20px;
-    margin-left: 10px;
 }
 
 .nav-item a i {
     padding: 5px;
-    font-size: 15px;
+    font-size:40px;
 }
 
 .w-auto {
     width: auto;
+    background-color: #555;
+}
+.icon-bar {
+    width: auto;
+    background-color: #555;
+}
+
+.icon-bar a {
+    display: block;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.md-pills .active {
+    background-color: #4CAF50 !important;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

@@ -1,25 +1,35 @@
-<div class="container-fluid" style="height: 100%; background-color: dimgrey;overflow:hidden;">
+<div class="container-fluid" style="height: 87%; background-color: dimgrey;overflow:hidden;">
         <!-- header ends-->
 
         <!--dynamic tabs begin-->
         <div class="row" style="position: relative;top:40px;">
             <div class="col-md-1">
                 <!-- Nav pills-->
-                <ul class="nav md-pills pills-primary flex-column cyan lighten-3" role="tablist">
-                    <li role="presentation" class="nav-item" style="background-color:yellow;shadow=10px;">
+                <ul class="nav md-pills pills-primary flex-column icon-bar" role="tablist">
+                    <li role="presentation" class="nav-item icon-bar">
                         <a class="nav-link active" href="#home" aria-controls="home" role="tab" data-toggle="pill">
-                            <i class="fa fa-download ml-2"></i>Events
+                            <i class="fas fa-user" aria-hidden="true" style="font-size:40px;align-items:center;padding-top:20px;"></i>
                         </a>
                     </li>
-                    <li role="presentation" class="nav-item" style="background-color:pink;">
+                    <li role="presentation" class="nav-item" >
                         <a class="nav-link" href="#menu1" aria-controls="menu1" role="tab" data-toggle="pill">
-                            <i class="fa fa-download ml-2"></i>Events
-                        </a>
+                            <i class="fa fa-cogs ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i></a>
                     </li>
-                    <li role="presentation" class="nav-item" style="background-color:greenyellow;">
+                    <li role="presentation" class="nav-item">
                         <a class="nav-link" href="#menu2" aria-controls="menu2" role="tab" data-toggle="pill">
-                            <i class="fa fa-download ml-2"></i>Events
-                        </a>
+                            <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i></a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
+                            <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i></a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
+                            <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i></a>
+                    </li>
+                    <li role="presentation" class="nav-item">
+                        <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
+                            <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i></a>
                     </li>
                 </ul>
             </div>
@@ -121,61 +131,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -189,7 +145,7 @@
                             <!-- table -->
                             <div class="panel panel-default">
                                 <h5 class="text-center" style="font-size:25px;">Available Units</h5>
-                                <div class="panel-body" style="height: 400px;overflow: auto;">
+                                <div class="panel-body" style="height: 550px;overflow: auto;">
                                     <table class="table table-sm table-bordered table-hover">
                                         <thead>
                                             <tr>
@@ -200,146 +156,7 @@
                                         </thead>
 
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>13</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>14</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>15</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>16</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>18</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>19</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>20</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>21</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>22</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>23</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>24</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>25</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>26</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>27</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>28</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -349,497 +166,63 @@
                     </div>
 
                     <!--tab 3-->
-                    <div id="menu2" class="tab-pane fade" role="tabpanel">
-                        <div class="row">
-                            
-                        <div class="card" col-md-6>
+                      <div id="menu2" class="tab-pane fade" role="tabpanel">
+                        <div class="card" style="margin-bottom:10px;">
                             <!-- table -->
                             <div class="panel panel-default">
                                 <h5 class="text-center" style="font-size:25px;">Available Units</h5>
-                                <div class="panel-body" style="height: 400px;overflow: auto;">
-                                    <table class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Incident</th>
-                                                <th>operator</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>13</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>14</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>15</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>16</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>18</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>19</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>20</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>21</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>22</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>23</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>24</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>25</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>26</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>27</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>28</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- table ends -->
-                        </div>
-                            
-                        <div class="card" col-sm-6>
-                            <!-- table -->
-                            <div class="panel panel-default">
-                                <h5 class="text-center" style="font-size:25px;">Available Units</h5>
-                                <div class="panel-body" style="height: 400px;overflow: auto;">
-                                  <table class="table table-sm table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>Incident</th>
-                                                <th>operator</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>13</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>14</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>15</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>16</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>18</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>19</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>20</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>21</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>22</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>23</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>24</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>25</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>26</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>27</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>28</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- table ends -->
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="card col-md-12" >
-                            <!-- table -->
-                            <div class="panel panel-default">
-                                <h5 class="text-center" style="font-size:25px;">Available Units</h5>
-                                <div class="panel-body" style="height: 400px;overflow: auto;">
+                                <div class="panel-body" style="height: 200px;overflow: auto;">
                                     <table class="table table-sm table-bordered table-hover">
-                                        <thead>
+                                        <thead class="blue-grey lighten-3">
                                             <tr>
-                                                <th>ID</th>
-                                                <th>Incident</th>
-                                                <th>operator</th>
+                                                <th class="text-center">ID</th>
+                                                <th class="text-center">Unit name</th>
+                                                <th class="text-center">View profile</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>13</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>14</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>15</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>16</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>17</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>18</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>19</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>20</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>21</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>22</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>23</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>24</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>25</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>26</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>27</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>28</td>
-                                                <td></td>
-                                                <td></td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                             <!-- table ends -->
+                             
                         </div>
+
+                        <!-- buttons-->
+                        <div class=" row " style="margin-top:15px;margin-bottom:5px;padding-right:20px;padding-bottom:5px;">
+                            <div class=" col-md-12 " style="border-radius:5px; ">
+                                <button type="button" class="btn btn-default " data-toggle="modal" data-target="#" style="margin-left:60px;">New Event</button>
+                                <button type="button" class="btn btn-default " data-toggle="modal" data-target="#">Edit Event</button>
+                                <button type="submit" class="btn btn-default">New Unit</button>
+                            </div>
+                        </div>
+                        <!-- buttons end-->
+
+                        <div class="card" style="margin-bottom:0px;">
+                            <!--table-->
+                            <div class="panel panel-default">
+                                <h5 class="text-center" style="font-size:25px;">Active Calls</h5>
+                                <div class="panel-body" style="height:250px;overflow: auto;">
+                                    <table class="table table-sm table-bordered table-hover">
+                                        <thead class="blue-grey lighten-3">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Location</th>
+                                                <th>Duration</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             <!-- tabs end -->
@@ -848,7 +231,7 @@
             <div class="col-md-5" style="padding-right:30px">
                 <!--Card-->
                 <!--map-->
-                <div class="card card-cascade narrower " style="margin-top:0;; ">
+                <div class="card card-cascade narrower " style="margin-top:0;">
                     <!--Card content-->
                     <div class="card-body text-center ">
 
@@ -1371,8 +754,21 @@
             </div>
         </div>
         <!-- Modal2 ends -->
+       
     </div>
-    
+   
+        <div class="container-fluid">
+               <div class="card col-md-12" style="position:relative;background-color:yellow;width:100%;">
+                            <!-- table -->
+                            <div class="panel panel-default">
+                                <h5 class="text-center" style="font-size:25px;">Available Units</h5>
+                                <div class="panel-body" style="height: 100%;overflow: auto;">
+                                
+                                </div>
+                   </div>
+            </div>
+            
+        </div> 
    
 <script>
 $(document).ready(function(){
