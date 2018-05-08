@@ -127,7 +127,6 @@
 })();
     
     </script>
-    <script src="js/jquery.min.js "></script>
     <!-- Bootstrap tooltips -->
     <script src="js/popper.min.js "></script>
     <!-- Bootstrap core JavaScript -->

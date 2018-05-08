@@ -52,7 +52,15 @@
    
                 
    </script>             
-                     
+          
+			<script src="js/bootstrap.min.js"></script>
+ <script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script>            
                      
                      </div>
               

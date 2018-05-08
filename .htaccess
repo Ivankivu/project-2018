@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %index.php -f
-RewriteRule ^(.*)$ $1.php
-</IfModule>

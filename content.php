@@ -754,10 +754,8 @@
             </div>
         </div>
         <!-- Modal2 ends -->
-       
     </div>
-   
-        <div class="container-fluid">
+    <div class="container-fluid">
                <div class="card col-md-12" style="position:relative;background-color:yellow;width:100%;">
                             <!-- table -->
                             <div class="panel panel-default">
@@ -769,6 +767,7 @@
             </div>
             
         </div> 
+       
    
 <script>
 $(document).ready(function(){
