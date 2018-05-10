@@ -82,8 +82,10 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 <div class="row" style="height:93%;z-index:300px;">
  <?php
-    include 'content.php';
-?>   
+
+    include 'admin-content.php';
+
+ ?>
   </div>  
   <div id="profile-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-lg">
@@ -98,7 +100,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
             <div class="modal-body">
 
 <?php
-                include 'User.php';
+               
                 ?>
           
            </div>
@@ -112,10 +114,9 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
                        <!-- /.modal -->    
-
+                
 <?php
-    include 'scripts.php';
+    include 'admin-script.php';
 ?>
-
 </body>
 </html>

@@ -27,6 +27,9 @@ if (isset($_SESSION['user_session'])!="") {
 <script type="text/javascript" src="js/validation.min.js"></script>
 <link href="css/mdb.min.css" rel="stylesheet" type="text/css" media="screen">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="screen">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="fontawesome/webcss/css/fontawesome-all.min.css">
 <script type="text/javascript" src="js/script.js"></script>
 <script>
     #loader-wrapper .loader-section {
@@ -63,6 +66,7 @@ h1 {
     transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
 }
 </script>
+
 </head>
 
 <body style="height:100%;">
@@ -84,24 +88,26 @@ h1 {
 <div class="col-md-4"></div>
 </div>
 
-<div class="card container-fluid" style="background-color:lightgrey;padding:5px; width:30%;">
+<div class="card container-fluid" style="background-color:lightgrey;padding:10px; width:25%;">
      
         <div class="card-body">
        <form class="md-form form-signin" method="post" id="login-form">
       
-        <h2 class="form-signin-heading text-center">Log In to WebApp</h2><hr />
+        <h2 class="form-signin-heading text-center">Login</h2><hr/>
         
         <div id="error">
         <!-- error will be shown here ! -->
         </div>
         
-        <div class="md-form form-group">
-        <input type="email" class="form-control" placeholder="email" name="user_email" id="user_email" />
+        <div class="md-form">
+        <i class="fas fa-envelope prefix black-text"></i>
+        <input type="email" class="form-control" placeholder="email" name="user_email" id="user_email"/>
         <span id="check-e"></span>
         </div>
         
-        <div class="md-form form-group">
-        <input type="password" class="form-control" placeholder="password" name="password" id="password" />
+        <div class="md-form">
+        <i class="fas fa-lock prefix black-text"></i>
+        <input type="password" class="form-control" placeholder="password" name="password" id="password"/>
         </div>
        
      	<hr />

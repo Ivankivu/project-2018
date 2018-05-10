@@ -75,41 +75,32 @@
             <div class="clearfix"></div>
             <hr style="margin:5px 0 5px 0;">
     
-              
-<div class="col-md-6 col-xs-6 tital " >First Name:</div><div class="col-md-6 col-xs-6 ">Prasad</div>
-     <div class="clearfix"></div>
-<div class="bot-border"></div>
+             <form class="form-control">
+    <div class="md-form form-group">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname">
+   </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Middle Name:</div><div class="col-sm-7"> Shankar</div>
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
+   <div class="md-form form-group">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname">
+   </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Last Name:</div><div class="col-sm-7"> Huddedar</div>
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
+   <div class="md-form form-group">
+        <label for="d.o.b">Date of Birth</label>
+        <input type="text" id="d.o.b">
+   </div>
 
-<div class="col-sm-5 col-xs-6 tital " >Date Of Joining:</div><div class="col-sm-7">15 Jun 2016</div>
+   <div class="md-form form-group">
+        <label for="nation">Nationality</label>
+        <input type="text" id="nation">
+   </div>
 
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
-
-<div class="col-sm-5 col-xs-6 tital " >Date Of Birth:</div><div class="col-sm-7">11 Jun 1998</div>
-
-  <div class="clearfix"></div>
-<div class="bot-border"></div>
-
-<div class="col-sm-5 col-xs-6 tital " >Place Of Birth:</div><div class="col-sm-7">Shirdi</div>
-
- <div class="clearfix"></div>
-<div class="bot-border"></div>
-
-<div class="col-sm-5 col-xs-6 tital " >Nationality:</div><div class="col-sm-7">Indian</div>
-
- <div class="clearfix"></div>
-<div class="bot-border"></div>
-
-<div class="col-sm-5 col-xs-6 tital " >Relition:</div><div class="col-sm-7">Hindu</div>
-
+   <div class="md-form form-group">
+        <label for="religion">Religion</label>
+        <input type="text" id="religion">
+   </div>
+             </form>
 
             <!-- /.box-body -->
           </div>

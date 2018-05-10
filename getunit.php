@@ -1,8 +1,8 @@
 <?php
-		 
-	require_once 'dbconfig.php';
+
+require_once 'dbconfig.php';
 	
-	if (isset($_REQUEST['id'])) {
+if (isset($_REQUEST['id'])) {
 			
 		$id = intval($_REQUEST['id']);
 		$query = "SELECT * FROM tbl_units WHERE user_id=:id";
@@ -42,3 +42,4 @@
 			
 		<?php				
 	}
+	?>
