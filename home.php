@@ -9,14 +9,17 @@
  * @license   https://github.com/Ivankivu/IUEA.git MIT Licence
  * @link      https://github.com/Ivankivu/IUEA.git
  */
+require_once 'dbconfig.php'; 
 session_start();
 if (!isset($_SESSION['user_session'])) {
     header("Location: index.php");
 }
-require_once 'dbconfig.php'; 
+
 $stmt = $db_con->prepare("SELECT * FROM tbl_users WHERE user_id=:uid");
 $stmt->execute(array(":uid"=>$_SESSION['user_session']));
 $row=$stmt->fetch(PDO::FETCH_ASSOC);
+
+
 ?>
 
 <!DOCTYPE html>
@@ -70,6 +73,8 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     </style>
 <script src="js/jquery-1.11.3-jquery.min.js"></script>
 <script src="js/sinch.min.js"></script>
+<script src="js/validation.min.js"></script>
+<script src="js/script.js"></script>
 </head>
 
 <body style="overflow:hidden;height:100%;">
@@ -112,7 +117,7 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
                        <!-- /.modal -->    
-
+                      
 <?php
     include 'scripts.php';
 ?>

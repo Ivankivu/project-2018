@@ -3,9 +3,9 @@
     <nav class="navbar navbar-fixed navbar-light warning-color col-md-12" style="position:absolute;top:0;">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand" href="#"><h2>ETARS</h2></a>
+        <a class="navbar-brand ml-3" href="#"><h2>ETARS</h2></a>
         <div class="pull-right">
-            <div style="float:left;padding-top:10px;"><h4>Hi' <?php echo $row['user_name']; ?>&nbsp;&nbsp;</h4></div>
+            <div style="float:left;padding-top:10px;"><h4>Hi <?php echo $row['first_name']; ?>!&nbsp;&nbsp;</h4></div>
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                    <img class="avatar dropdown-toggle"  data-toggle="dropdown" src="images/bg-11.jpg" role="button" aria-haspopup="true" aria-expanded="false" alt="Avatar">

@@ -1,9 +1,9 @@
-<div class="container-fluid" style="height: 87%; background-color: dimgrey;overflow:hidden;">
+<div class="container-fluid" style="height: 100%; background-color: dimgrey;overflow:hidden;">
     <!-- header ends-->
 
     <!--dynamic tabs begin-->
     <div class="row" style="position: relative;top:40px;">
-        <div class="col-md-1">
+        <div class="col-xs-1 col-sm-1 col-md-1">
             <!-- Nav pills-->
             <ul class="nav md-pills pills-primary flex-column icon-bar" role="tablist">
                 <li role="presentation" class="nav-item icon-bar">
@@ -39,7 +39,7 @@
             </ul>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-xs-6 col-sm-6 col-md-6">
             <!-- tab content -->
             <div class="tab-content vertical">
 
@@ -47,10 +47,12 @@
                 <div id="home" class="tab-pane fade in show active" role="tabpanel">
                     <div class="card" style="margin-bottom:10px;">
                         <!-- table -->
-                        <div class="panel panel-default">
-                            <h5 class="text-center" style="font-size:25px;">Available Units</h5>
-                            <div class="panel-body" style="height: 200px;overflow: auto;">
-                                <table class="table table-sm table-bordered table-hover">
+                        <div class="card panel-default">
+                        <div class="card-header">
+                        <i class="fa fa-table"></i>&nbsp;&nbsp;Available Units
+                            </div>
+                            <div class="card-body" style="height: 200px;overflow: auto;">
+                                <table class="table table-sm table-bordered table-condensed table-hover">
                                     <thead class="blue-grey lighten-3">
                                         <tr>
                                             <th class="text-center">ID</th>
@@ -60,28 +62,23 @@
                                     </thead>
 
                                     <tbody>
-                                        <?php
+                                    <?php
 
-            		$query = "SELECT * FROM tbl_units";
-            		$stmt = $db_con->prepare( $query );
-            		$stmt->execute();
-            		while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-						?>
+                                        $query = "SELECT * FROM tbl_units";
+                                        $stmt = $db_con->prepare( $query );
+                                        $stmt->execute();
+                                        while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+                                            ?>
                                             <tr>
-                                                <td class="text-center">
-                                                    <?php echo $row["user_id"]; ?>
-                                                </td>
-                                                <td class="text-center">
-                                                    <?php echo $row["first_name"]."&nbsp;".$row["last_name"]; ?>
-                                                </td>
-                                                <td>
-                                                    <button data-toggle="modal" data-target="#view-modal" data-id="<?php echo $row[" user_id "]; ?>" id="getUser" class="btn btn-sm btn-info">
-                                                        <i class="fas fa-eye" style="align-items:center;"></i> View</button>
-                                                </td>
+                                            <td class="text-center"><?php echo $row["unit_id"]; ?></td>
+                                            <td class="text-center"><?php echo $row["first_name"]."&nbsp;".$row["last_name"]; ?></td>
+                                            <td>
+                                            <button data-toggle="modal" data-target="#view-modal" data-id="<?php echo $row["unit_id"]; ?>" id="getUser" class="btn btn-sm btn-info"><i class="fas fa-eye" style="align-items:center;"></i> View</button>
+                                            </td>
                                             </tr>
                                             <?php
-					}
-            		?>
+                                        }
+                                        ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -93,7 +90,7 @@
                                 <div class="modal-content">
 
                                     <div class="modal-header text-center">
-                                        <h4 class="modal-title">
+                                        <h4 class="modal-title h4-responsive">
                                             <i class="fa fa-user"></i> Unit Profile
                                         </h4>
                                     </div>
@@ -119,10 +116,10 @@
 
                     <!-- buttons-->
                     <div class=" row " style="margin-top:15px;margin-bottom:5px;padding-right:20px;padding-bottom:5px;">
-                        <div class=" col-md-12 " style="border-radius:5px; ">
+                        <div class=" col-xs-12 col-sm-12 col-md-12 " style="border-radius:5px; ">
                             <button type="button" class="btn btn-default " data-toggle="modal" data-target="#myModal" style="margin-left:60px;">New Event</button>
                             <button type="button" class="btn btn-default " data-toggle="modal" data-target="#myModal2">Edit Event</button>
-                            <button type="submit" class="btn btn-default">New Unit</button>
+                            <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#myModal3">add Unit</button>
                         </div>
                     </div>
                     <!-- buttons end-->
@@ -130,7 +127,7 @@
                     <div class="card" style="margin-bottom:0px;">
                         <!--table-->
                         <div class="panel panel-default">
-                            <h5 class="text-center" style="font-size:25px;">Active Calls</h5>
+                            <h5 class="text-center h5-responsive" style="font-size:25px;">Active Calls</h5>
                             <div class="panel-body" style="height:250px;overflow: auto;">
                                 <table class="table table-sm table-bordered table-hover">
                                     <thead class="blue-grey lighten-3">
@@ -154,7 +151,7 @@
                     <div class="card">
                         <!-- table -->
                         <div class="panel panel-default">
-                            <h5 class="text-center" style="font-size:25px;">Available Units</h5>
+                            <h5 class="text-center h5-responsive" style="font-size:25px;">Available Units</h5>
                             <div class="panel-body" style="height: 550px;overflow: auto;">
                                 <table class="table table-sm table-bordered table-hover">
                                     <thead>
@@ -180,7 +177,7 @@
                     <div class="card" style="margin-bottom:10px;">
                         <!-- table -->
                         <div class="panel panel-default">
-                            <h5 class="text-center" style="font-size:25px;">Available Units</h5>
+                            <h5 class="text-center h5-responsive" style="font-size:25px;">Available Units</h5>
                             <div class="panel-body" style="height: 200px;overflow: auto;">
                                 <table class="table table-sm table-bordered table-hover">
                                     <thead class="blue-grey lighten-3">
@@ -203,7 +200,7 @@
 
                     <!-- buttons-->
                     <div class=" row " style="margin-top:15px;margin-bottom:5px;padding-right:20px;padding-bottom:5px;">
-                        <div class=" col-md-12 " style="border-radius:5px; ">
+                        <div class=" col-xs-12 col-sm-12 col-md-12 " style="border-radius:5px; ">
                             <button type="button" class="btn btn-default " data-toggle="modal" data-target="#" style="margin-left:60px;">New Event</button>
                             <button type="button" class="btn btn-default " data-toggle="modal" data-target="#">Edit Event</button>
                             <button type="submit" class="btn btn-default">New Unit</button>
@@ -214,7 +211,7 @@
                     <div class="card" style="margin-bottom:0px;">
                         <!--table-->
                         <div class="panel panel-default">
-                            <h5 class="text-center" style="font-size:25px;">Active Calls</h5>
+                            <h5 class="text-center h5-responsive" style="font-size:25px;">Active Calls</h5>
                             <div class="panel-body" style="height:250px;overflow: auto;">
                                 <table class="table table-sm table-bordered table-hover">
                                     <thead class="blue-grey lighten-3">
@@ -238,7 +235,7 @@
         <!-- tabs end -->
 
         <!-- side map-->
-        <div class="col-md-5" style="padding-right:30px">
+        <div class="col-xs-5 col-sm-5 col-md-5" style="padding-right:30px">
             <!--Card-->
             <!--map-->
             <div class="card card-cascade narrower " style="margin-top:0;">
@@ -256,7 +253,7 @@
             <!--/.Card-->
             <div class="row">
                 <!--VOIP Dail-->
-                <div class="col-md-12 text-center" style="float:right;top:15px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center" style="float:right;top:15px;">
                     <div class="card panel-default" style="height:275px;">
                         <div class="row card-body">
                             <div class="container">
@@ -264,7 +261,7 @@
 
                                 <div class="frame small" style="display: block;">
                                     <div class="inner loginBox">
-                                        <h3 id="login">Sign in</h3>
+                                        <h3 class="h3-responsive" id="login">Sign in</h3>
                                         <form class="md-form" id="userForm" style="display: inline;">
 
                                             <input type="text" id="username" placeholder="USERNAME">
@@ -277,7 +274,7 @@
                                             <button id="createUser">Create</button>
                                         </form>
                                         <div id="userInfo">
-                                            <h3>
+                                            <h3 class="h3-responsive">
                                                 <span id="username"></span>
                                             </h3>
                                             <button id="logOut">Logout</button>
@@ -288,12 +285,12 @@
                                 </div>
 
                                 <div class="frame" style="display: block;">
-                                    <h3>Web Call</h3>
+                                    <h3 class="h3-responsive">Web Call</h3>
                                     <div id="call">
                                         <form id="newCall">
                                             <input id="callUserName" placeholder="Username (alice)">
                                             <br>
-                                            <div id="webcallbtn" class="col-sm-12">
+                                            <div id="webcallbtn" class="col-xs-12 col-sm-12 col-md-12">
                                                 <button id="call">Call</button>
                                                 <button id="hangup">Hangup</button>
                                                 <button id="answer">Answer</button>
@@ -324,7 +321,7 @@
         <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-header primary-color white-text">
-                    <h4 class="title text-center">
+                    <h4 class="title text-center h4-responsive">
                         <i class="fa fa-pencil prefix"></i>Add new Event</h4>
                     <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="close">
                         <span aria-hidden="true">x</span>
@@ -332,13 +329,16 @@
                 </div>
                 <div class="modal-body" style="padding:20px 30px 0 30px;">
                     <div class="panel panel-default">
+<?php
 
+
+?>
                         <!-- Extended material form grid -->
                         <form>
                             <!-- Grid row -->
                             <div class="form-row">
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <label for="received" style="margin-top:-30px;">Recieved</label>
@@ -349,7 +349,7 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="email" class="form-control" id="inputEmail4MD">
@@ -359,7 +359,7 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="email" class="form-control" id="email">
@@ -373,7 +373,7 @@
                             <!-- Grid row -->
                             <div class="row">
                                 <!-- Grid column -->
-                                <div class="col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="address">
@@ -386,18 +386,11 @@
 
                             <!-- Grid row -->
                             <div class="form-row">
-                                <!-- Grid column -->
-                                <div class="col-md-4">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="text" class="form-control" id="area">
-                                        <label for="area">Area</label>
-                                    </div>
-                                </div>
+                                
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="suite">
@@ -407,10 +400,10 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
-                                        <select id="select" class="md-select form-control colorful-select dropdown-primary mx-2" style="margin-top:20px;">
+                                        <select id="select" class="md-select form-control colorful-select dropdown-primary mx-2" style="margin-top:20px;border:none;">
                                             <option value="" disabled selected>Select Incident</option>
                                             <option>Suspicious Person</option>
                                             <option>Intoxicated Person</option>
@@ -445,21 +438,13 @@
                                 </div>
                                 <!-- Grid column -->
 
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <textarea class="md-textarea md-textarea-auto form-control" id="info" rows="1"></textarea>
-                                        <label for="info">Additional Info</label>
-                                    </div>
-                                </div>
                                 <!--Grid column-->
                                 <!-- Grid column -->
-                                <div class="col-md-6">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <textarea class="md-textarea md-textarea-auto  form-control" id="notes" rows="1"></textarea>
-                                        <label for="notes">Incident Notes</label>
+                                    <div class="md-form form-group" style="margin-top:20px;">
+                                        <textarea class="md-textarea md-textarea-auto  form-control" id="notes" rows="2"></textarea>
+                                        <label for="notes" style="margin-top:-20px;">Incident Notes</label>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -468,7 +453,7 @@
 
                             <div class="form-row">
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="complaint">
@@ -479,10 +464,10 @@
 
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
-                                        <select id="loc" class="md-select form-control colorful-select dropdown-primary mx-1">
+                                        <select id="loc" class="md-select form-control colorful-select dropdown-primary mx-1" style="border:none;">
                                             <option value="" disabled selected>Choose Location</option>
                                             <option>Kampala</option>
                                             <option>Makindye</option>
@@ -497,42 +482,11 @@
                                     </div>
                                 </div>
                                 <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-4">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="text" class="form-control" id="unit">
-                                        <label for="unit">Unit Assigned</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
 
                             </div>
                             <!-- Grid row -->
 
                             <div class="form-row">
-
-
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="date" class="form-control datepicker" id="dispatched">
-                                        <label for="dispatched" style="margin-top:-30px;">Dispatched</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
-
-
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="date" class="form-control datepicker" id="arrived">
-                                        <label for="arrived" style="margin-top:-30px;">Arrived</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
 
                             </div>
 
@@ -565,12 +519,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="panel panel-default" style="padding:20px 30px 0 30px;">
-                        <!-- Extended material form grid -->
+                         <!-- Extended material form grid -->
                         <form>
                             <!-- Grid row -->
                             <div class="form-row">
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <label for="received" style="margin-top:-30px;">Recieved</label>
@@ -581,7 +535,7 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="email" class="form-control" id="inputEmail4MD">
@@ -591,7 +545,7 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-4 col-sm-4 col-md-4">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="email" class="form-control" id="email">
@@ -605,7 +559,7 @@
                             <!-- Grid row -->
                             <div class="row">
                                 <!-- Grid column -->
-                                <div class="col-md-12">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="address">
@@ -618,18 +572,11 @@
 
                             <!-- Grid row -->
                             <div class="form-row">
-                                <!-- Grid column -->
-                                <div class="col-md-4">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="text" class="form-control" id="area">
-                                        <label for="area">Area</label>
-                                    </div>
-                                </div>
+                                
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="suite">
@@ -639,10 +586,10 @@
                                 <!-- Grid column -->
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
-                                        <select id="select" class="md-select form-control colorful-select dropdown-primary mx-2" style="margin-top:20px;">
+                                        <select id="select" class="md-select form-control colorful-select dropdown-primary mx-2" style="margin-top:20px;border:none;">
                                             <option value="" disabled selected>Select Incident</option>
                                             <option>Suspicious Person</option>
                                             <option>Intoxicated Person</option>
@@ -675,23 +622,15 @@
                                         </select>
                                     </div>
                                 </div>
-                                <!-- Grid column--->
-
                                 <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <textarea class="md-textarea md-textarea-auto form-control" id="info" rows="1"></textarea>
-                                        <label for="info">Additional Info</label>
-                                    </div>
-                                </div>
+
                                 <!--Grid column-->
                                 <!-- Grid column -->
-                                <div class="col-md-6">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
                                     <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <textarea class="md-textarea md-textarea-auto  form-control" id="notes" rows="1"></textarea>
-                                        <label for="notes">Incident Notes</label>
+                                    <div class="md-form form-group" style="margin-top:20px;">
+                                        <textarea class="md-textarea md-textarea-auto  form-control" id="notes" rows="2"></textarea>
+                                        <label for="notes" style="margin-top:-20px;">Incident Notes</label>
                                     </div>
                                 </div>
                                 <!--Grid column-->
@@ -700,7 +639,7 @@
 
                             <div class="form-row">
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
                                         <input type="text" class="form-control" id="complaint">
@@ -711,10 +650,10 @@
 
 
                                 <!-- Grid column -->
-                                <div class="col-md-4">
+                                <div class="col-xs-6 col-sm-6 col-md-6">
                                     <!-- Material input -->
                                     <div class="md-form form-group">
-                                        <select id="loc" class="md-select form-control colorful-select dropdown-primary mx-1">
+                                        <select id="loc" class="md-select form-control colorful-select dropdown-primary mx-1" style="border:none;">
                                             <option value="" disabled selected>Choose Location</option>
                                             <option>Kampala</option>
                                             <option>Makindye</option>
@@ -729,42 +668,11 @@
                                     </div>
                                 </div>
                                 <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-4">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="text" class="form-control" id="unit">
-                                        <label for="unit">Unit Assigned</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
 
                             </div>
                             <!-- Grid row -->
 
                             <div class="form-row">
-
-
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="date" class="form-control datepicker" id="dispatched">
-                                        <label for="dispatched" style="margin-top:-30px;">Dispatched</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
-
-
-                                <!-- Grid column -->
-                                <div class="col-md-6">
-                                    <!-- Material input -->
-                                    <div class="md-form form-group">
-                                        <input type="date" class="form-control datepicker" id="arrived">
-                                        <label for="arrived" style="margin-top:-30px;">Arrived</label>
-                                    </div>
-                                </div>
-                                <!-- Grid column -->
 
                             </div>
 
@@ -779,19 +687,136 @@
         </div>
     </div>
     <!-- Modal2 ends -->
+
+    <!-- Modal3 -->
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header warning-color white-text">
+                    <h4 class="modal-title text-center">
+                        <i class="fa fa-pencil prefix"></i>add unit</h4>
+                    <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default" style="padding:20px 30px 0 30px;">
+           
+                         <!-- Extended material form grid -->
+                        <form class="form-signin" id="addunit" method="POST">
+                        <!-- error will be showen here -->
+                        <div id="error"></div>
+                            <!-- Grid row -->
+                            <div class="form-row">
+                             
+                                <!-- Grid column -->
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                        <input type="text" class="form-control" name="first_name" id="first_name">
+                                        <label for="first_name">First Name</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                        <input type="text" class="form-control" name="last_name" id="last_name">
+                                        <label for="last_name">Last Name</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+
+                            <!-- Grid row -->
+                            <div class="row">
+                                <!-- Grid column -->
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                        <input type="email" class="form-control" id="unit_email">
+                                        <label for="unit_email">Email</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+                            </div>
+                            <!-- Grid row -->
+
+                            <!-- Grid row -->
+                            <div class="form-row">
+                                <!-- Grid column -->
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                        <input type="text" class="form-control" id="profes">
+                                        <label for="profes">Proffession</label>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!-- Grid column -->
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                        <select name="station" id="station" class="md-select form-control colorful-select dropdown-primary mx-2" style="margin-top:20px;border:none;">
+                                            <option value="-1" disabled selected>Select Station</option>
+                                            <option name="kampala" value="kampala">Kampala</option>
+                                            <option name="makindye" value="makindye">Makindye</option>
+                                            <option name="kabalagala" value="kabalagala">Kabalagala</option>
+                                            <option name="kansanga" value="kansanga">Kansanga</option>
+                                            <option name="bunga" value="bunga">Bunga</option>
+                                            <option name="munyonyo" value="munyonyo">Munyonyo</option>
+                                            <option name="ggaba" value="ggaba">Ggaba</option>
+                                            <option name="nsambya" value="nsambya">Nsambya</option>
+                                            <option name="muyenga" value="muyenga">Muyenga</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Grid column -->
+
+                                <!--Grid column-->
+                                <!-- Grid column -->
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <!-- Material input -->
+                                    <div class="md-form form-group">
+                                    <input type="text" class="form-control" id="call_id">
+                                        <label for="call_id" style="margin-top:-20px;">Call ID</label>
+                                    </div>
+                                </div>
+                                <!--Grid column-->
+                            </div>
+                            <!-- Grid row -->
+
+                            <div class="form-row">
+                            <button type="submit" class="btn btn-default" name="btn-push" id="btn-push">
+                                        <span class="glyphicon glyphicon-log-in"></span> &nbsp; Add unit
+                                    </button>
+                            </div>
+
+                        </form>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal2 ends -->
 </div>
-<div class="container-fluid">
-    <div class="card col-md-12" style="position:relative;background-color:yellow;width:100%;">
-        <!-- table -->
+<!--div class="container-fluid">
+    <div class="card col-xs-12 col-sm-12 col-md-12" style="position:relative;background-color:yellow;width:100%;">
+        <!-- table --->
         <div class="panel panel-default">
-            <h5 class="text-center" style="font-size:25px;">Available Units</h5>
+            <h5 class="text-center h5-responsive" style="font-size:25px;"></h5>
             <div class="panel-body" style="height: 100%;overflow: auto;">
 
             </div>
         </div>
     </div>
 
-</div>
+</div-->
 
 
 <script>
@@ -801,7 +826,7 @@
 
             e.preventDefault();
 
-            var uid = $(this).data('id'); // it will get id of clicked rows
+            var uid = $(this).data('id'); // it will get id of clicked row
 
             $('#dynamic-content').html(''); // leave it blank before ajax call
             $('#modal-loader').show(); // load ajax loader

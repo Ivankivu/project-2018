@@ -5,7 +5,7 @@ require_once 'dbconfig.php';
 if (isset($_REQUEST['id'])) {
 			
 		$id = intval($_REQUEST['id']);
-		$query = "SELECT * FROM tbl_units WHERE user_id=:id";
+		$query = "SELECT * FROM tbl_units WHERE unit_id=:id";
 		$stmt = $db_con->prepare( $query );
 		$stmt->execute(array(':id'=>$id));
 		$row=$stmt->fetch(PDO::FETCH_ASSOC);
@@ -22,15 +22,15 @@ if (isset($_REQUEST['id'])) {
 			</tr>
 			<tr>
 				<th>Email ID</th>
-				<td><?php echo $email; ?></td>
+				<td><?php echo $unit_email; ?></td>
 			</tr>
 			<tr>
 				<th>Position</th>
-				<td><?php echo $position; ?></td>
+				<td><?php echo $profession; ?></td>
 			</tr>
 			<tr>
 				<th>Duty Station</th>
-				<td><?php echo $office; ?></td>
+				<td><?php echo $station; ?></td>
 			</tr>
 			<tr>
 				<th>Call ID</th>
