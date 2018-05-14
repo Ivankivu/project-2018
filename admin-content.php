@@ -8,14 +8,8 @@
             <ul class="nav md-pills pills-primary flex-column icon-bar" role="tablist">
                 <li role="presentation" class="nav-item icon-bar">
                     <a class="nav-link active" href="#home" aria-controls="home" role="tab" data-toggle="pill">
-                        <i class="fas fa-user ml-2" aria-hidden="true" style="font-size:30px;"></i>
-                        <span class="ml-1" style="font-size:20px;">Profile</span>
-                    </a>
-                </li>
-                <li role="presentation" class="nav-item" style="margin-top:40px;">
-                    <a class="nav-link" href="#menu1" aria-controls="menu1" role="tab" data-toggle="pill">
-                        <i class="fa fa-users ml-2" style="font-size:30px;"></i>
-                        <span class="ml-2" style="font-size:20px;">Users</span>
+                        <i class="fas fa-users ml-2" aria-hidden="true" style="font-size:30px;"></i>
+                        <span class="ml-1" style="font-size:20px;">Users</span>
                     </a>
                 </li>
                 <li role="presentation" class="nav-item" style="margin-top:40px;">
@@ -50,42 +44,9 @@
                         <div class="card panel-default">
                         <div class="card-header">
                         <i class="fa fa-user"></i>&nbsp;
-                        Profile
+                        Add new Users
                             </div>
                             <div class="card-body" style="height: 590px;overflow: auto;">
-                            
-                                <!-- Example Bar Chart Card-->
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
-                                            <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                                <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
-                                            </div>
-                                            <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
-                                                <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
-                                            </div>
-                                        </div>
-                                        <canvas id="myBarChart" width="796" height="398" style="display: block; width: 796px; height: 398px;" class="chartjs-render-monitor"></canvas>
-                                    </div>
-                                </div>
-       
-
-                            </div>
-                        </div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                    </div>
-                </div>
-
-                <!--tab 2-->
-                <div id="menu1" class="tab-pane fade" role="tabpanel">
-                    <div class="card">
-                        <!-- table -->
-                        <div class="card panel-default">
-                        <div class="card-header">
-                        <i class="fa fa-users"></i>&nbsp;&nbsp;Add new user
-                            </div>
-                            <div class="card-body" style="height:590px;overflow: auto;">
-
                             <form class="md-form form-signin form-control-lg " method="post" id="register-form" style="border:none;">
                                 <!-- error will be showen here -->
                                 <div id="error"></div>
@@ -140,14 +101,14 @@
 
                             </form>
 
+
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-                        <!-- table ends -->
                     </div>
                 </div>
 
-                <!--tab 3-->
+                <!--tab 2-->
                 <div id="menu2" class="tab-pane fade" role="tabpanel">
                     <div class="card" style="margin-bottom:10px;">
                         <div class="card panel-default">
@@ -164,7 +125,7 @@
                     </div>
                 </div>
 
-                <!--tab 4-->
+                <!--tab 3-->
                 <div id="menu3" class="tab-pane fade" role="tabpanel">
                                     <div class="card" style="margin-bottom:10px;">
                                         <div class="card panel-default">

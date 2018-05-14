@@ -3,43 +3,37 @@
 
     <!--dynamic tabs begin-->
     <div class="row" style="position: relative;top:40px;">
-        <div class="col-xs-1 col-sm-1 col-md-1">
+
+        <div class="col-xs-1 col-sm-1 col-md-1 mb-2">
             <!-- Nav pills-->
             <ul class="nav md-pills pills-primary flex-column icon-bar" role="tablist">
                 <li role="presentation" class="nav-item icon-bar">
                     <a class="nav-link active" href="#home" aria-controls="home" role="tab" data-toggle="pill">
-                        <i class="fas fa-user" aria-hidden="true" style="font-size:40px;align-items:center;padding-top:20px;"></i>
+                        <i class="fas fa-tasks" aria-hidden="true" style="font-size:30px;"></i>
+                        <span class="ml-1" style="font-size:20px;">Users</span>
                     </a>
                 </li>
                 <li role="presentation" class="nav-item">
-                    <a class="nav-link" href="#menu1" aria-controls="menu1" role="tab" data-toggle="pill">
-                        <i class="fa fa-cogs ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i>
+                    <a class="nav-link" href="#menu1" aria-controls="menu1" role="tab" data-toggle="pill" style="margin-top:40px;">
+                        <i class="fa fa-table ml-2" style="font-size:30px;"></i>
+                        <span style="font-size:20px;">Users</span>
                     </a>
                 </li>
-                <li role="presentation" class="nav-item">
-                    <a class="nav-link" href="#menu2" aria-controls="menu2" role="tab" data-toggle="pill">
-                        <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i>
+                <li role="presentation" class="nav-item" style="margin-top:40px;">
+                    <a class="nav-link" href="#menu2" aria-controls="menu2" role="tab" data-toggle="pill" style="margin-top:40px;">
+                        <i class="fa fa-users ml-2" style="font-size:30px;"></i>
+                        <span style="font-size:20px;">Users</span>
                     </a>
                 </li>
-                <li role="presentation" class="nav-item">
-                    <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
-                        <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i>
-                    </a>
-                </li>
-                <li role="presentation" class="nav-item">
-                    <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
-                        <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i>
-                    </a>
-                </li>
-                <li role="presentation" class="nav-item">
-                    <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill">
-                        <i class="fa fa-download ml-2" style="font-size:40px;align-items:center;padding-top:20px;"></i>
+                <li role="presentation" class="nav-item" style="margin-top:40px;">
+                    <a class="nav-link" href="" aria-controls="menu2" role="tab" data-toggle="pill" style="margin-top:40px;">
+                        <i class="fa fa-cogs ml-2" style="font-size:30px;"></i>
+                        <span style="font-size:20px;">Manage</span>
                     </a>
                 </li>
             </ul>
         </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-6">
+        <div class="col-xs-6 col-sm-6 col-md-6 ">
             <!-- tab content -->
             <div class="tab-content vertical">
 
@@ -243,8 +237,9 @@
                 <div class="card-body text-center ">
 
                     <!--Google map-->
-                    <div id="map" class="z-depth-1 " style="height: 265px;background-color: aquamarine; border-radius:5px;"></div>
-
+              
+                    <div id="map-canvas"  class= "z-depth-1 " style="height: 265px;background-color: aquamarine; border-radius:5px;"></div>
+                    
                 </div>
                 <!--/.Card content-->
             </div>
@@ -805,19 +800,6 @@
     </div>
     <!-- Modal2 ends -->
 </div>
-<!--div class="container-fluid">
-    <div class="card col-xs-12 col-sm-12 col-md-12" style="position:relative;background-color:yellow;width:100%;">
-        <!-- table --->
-        <div class="panel panel-default">
-            <h5 class="text-center h5-responsive" style="font-size:25px;"></h5>
-            <div class="panel-body" style="height: 100%;overflow: auto;">
-
-            </div>
-        </div>
-    </div>
-
-</div-->
-
 
 <script>
     $(document).ready(function () {
@@ -854,3 +836,85 @@
 
     });
 </script>
+<?php
+        $locations=array(); 
+        $uname="root";
+        $pass="";
+        $servername="localhost";
+        $dbname="dbregistration";
+        $db=new mysqli($servername, $uname, $pass, $dbname);
+        $query =  $db->query("SELECT * FROM markers");
+        //$number_of_rows = mysql_num_rows($db);  
+        //echo $number_of_rows;
+
+        while( $row = $query->fetch_assoc() ){
+            $name = $row['name'];
+            $longitude = $row['lng'];                              
+            $latitude = $row['lat'];
+            $link=$row['address'];
+            /* Each row is added as a new array */
+            $locations[]=array( 'name'=>$name, 'lat'=>$latitude, 'lng'=>$longitude, 'address'=>$link );
+        }
+
+
+        //echo $locations[0]['name'].": In stock: ".$locations[0]['lat'].", sold: ".$locations[0]['lng'].".<br>";
+        //echo $locations[1]['name'].": In stock: ".$locations[1]['lat'].", sold: ".$locations[1]['lng'].".<br>";
+    ?>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDy5ccVAXNyGvz9h_q1UeU_iMm6b-JJb_Y"></script> 
+    <script type="text/javascript">
+  
+    var map;
+    var Markers = {};
+    var infowindow;
+    var locations = [
+        <?php for($i=0;$i<sizeof($locations);$i++){ $j=$i+1;?>
+        [
+            'AMC Service',
+            '<p><a href="<?php echo $locations[0]['address'];?>">Attend to this person now!!</a></p>',
+            <?php echo $locations[$i]['lat'];?>,
+            <?php echo $locations[$i]['lng'];?>,
+            0
+        ]<?php if($j!=sizeof($locations))echo ","; }?>
+    ];
+    var origin = new google.maps.LatLng(locations[0][2], locations[0][3]);
+
+    function initialize() {
+      var mapOptions = {
+        zoom: 11,
+        center: origin
+      };
+
+      map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        infowindow = new google.maps.InfoWindow();
+
+        for(i=0; i<locations.length; i++) {
+            var position = new google.maps.LatLng(locations[i][2], locations[i][3]);
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+            });
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infowindow.setContent(locations[i][1]);
+                    infowindow.setOptions({maxWidth: 200});
+                    infowindow.open(map, marker);
+                }
+            }) (marker, i));
+            Markers[locations[i][4]] = marker;
+        }
+
+        locate(0);
+
+    }
+
+    function locate(marker_id) {
+        var myMarker = Markers[marker_id];
+        var markerPosition = myMarker.getPosition();
+        map.setCenter(markerPosition);
+        google.maps.event.trigger(myMarker, 'click');
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>

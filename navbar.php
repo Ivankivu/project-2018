@@ -5,7 +5,7 @@
         <!-- Navbar brand -->
         <a class="navbar-brand ml-3" href="#"><h2>ETARS</h2></a>
         <div class="pull-right">
-            <div style="float:left;padding-top:10px;"><h4>Hi <?php echo $row['first_name']; ?>!&nbsp;&nbsp;</h4></div>
+            <div style="float:left;padding-top:10px;"><h4>Hi <?php echo $first_name; ?>!&nbsp;&nbsp;</h4></div>
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                    <img class="avatar dropdown-toggle"  data-toggle="dropdown" src="images/bg-11.jpg" role="button" aria-haspopup="true" aria-expanded="false" alt="Avatar">

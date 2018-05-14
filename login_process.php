@@ -19,9 +19,14 @@
 			$count = $stmt->rowCount();
 			
 			if($row['user_password']==$password) {
-				
+				$user_id = $row['user_id'];
+				$user_role = $row['user_role'];
+				$first_name = $row['first_name'];
+
 				echo "ok"; // log in
-$_SESSION['user_session'] = $row['user_id'];
+$_SESSION['user_id'] = $user_id; 
+$_SESSION['user_role'] = $user_role;
+$_SESSION['first_name'] = $first_name;
 			}
 			else{
 				

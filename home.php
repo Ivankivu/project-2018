@@ -11,15 +11,9 @@
  */
 require_once 'dbconfig.php'; 
 session_start();
-if (!isset($_SESSION['user_session'])) {
+if ($_SESSION['user_role']!=="agent") {
     header("Location: index.php");
 }
-
-$stmt = $db_con->prepare("SELECT * FROM tbl_users WHERE user_id=:uid");
-$stmt->execute(array(":uid"=>$_SESSION['user_session']));
-$row=$stmt->fetch(PDO::FETCH_ASSOC);
-
-
 ?>
 
 <!DOCTYPE html>
@@ -117,7 +111,9 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
     </div>
 </div>
                        <!-- /.modal -->    
-                      
+              <script scr="map.js"></script>   
+              <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy5ccVAXNyGvz9h_q1UeU_iMm6b-JJb_Y&callback=initMap">
+</script>     
 <?php
     include 'scripts.php';
 ?>

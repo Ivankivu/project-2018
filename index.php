@@ -12,7 +12,10 @@
 session_start();
 require_once 'dbconfig.php';
 
-if (isset($_SESSION['user_session'])!="") {
+if (isset($_SESSION['user_session'])!=="" && isset($_SESSION['user_role']) == "administrator") {
+    header("Location: admin_dash.php");
+
+} elseif (isset($_SESSION['user_session'])!=="" && isset($_SESSION['user_role']) == "agent") {
     header("Location: home.php");
 }
 

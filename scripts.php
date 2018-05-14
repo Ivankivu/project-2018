@@ -36,14 +36,6 @@
         $('#myTab a[href="' + hash + '"]').tab('show');
     });
 </script>
-    
-    
-<!--Google Maps-->
-<script>
-</script>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDy5ccVAXNyGvz9h_q1UeU_iMm6b-JJb_Y&callback=initMap">
-</script>
                 
     <!--clock script-->
 <script>
