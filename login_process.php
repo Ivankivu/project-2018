@@ -24,9 +24,9 @@
 				$first_name = $row['first_name'];
 
 				echo "ok"; // log in
-$_SESSION['user_id'] = $user_id; 
-$_SESSION['user_role'] = $user_role;
-$_SESSION['first_name'] = $first_name;
+			$_SESSION['user_id'] = $user_id; 
+			$_SESSION['user_role'] = $user_role;
+			$_SESSION['first_name'] = $first_name;
 			}
 			else{
 				

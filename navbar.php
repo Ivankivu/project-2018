@@ -5,7 +5,17 @@
         <!-- Navbar brand -->
         <a class="navbar-brand ml-3" href="#"><h2>ETARS</h2></a>
         <div class="pull-right">
-            <div style="float:left;padding-top:10px;"><h4>Hi <?php echo $first_name; ?>!&nbsp;&nbsp;</h4></div>
+        <?php
+
+$query = "SELECT * FROM tbl_users where user_id=".$_SESSION['user_id']."";
+$stmt = $db_con->prepare($query);
+$stmt->execute();
+while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+    ?>
+            <div style="float:left;padding-top:10px;"><h4>Hi <?php echo $row["first_name"]; ?>!&nbsp;&nbsp;</h4></div>
+            <?php
+}
+            ?>
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                    <img class="avatar dropdown-toggle"  data-toggle="dropdown" src="images/bg-11.jpg" role="button" aria-haspopup="true" aria-expanded="false" alt="Avatar">

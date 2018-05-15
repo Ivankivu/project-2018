@@ -33,7 +33,6 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
         <link href="dash.css" rel="stylesheet" media="screen">
         <link rel="stylesheet" href="css/mdb.min.css">
         <link rel="stylesheet" href="css/propic.css">
-        <link href="datatables/dataTables.bootstrap4.css" rel="stylesheet">
 
         <!--sample-->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
@@ -91,15 +90,11 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
                 border-bottom: 1px #f8f8f8 solid;
                 margin: 5px 0 5px 0
             }
+            #chart-container {
+				width: 640px;
+				height: auto;
+			}
         </style>
-        <script src="js/jquery-1.11.3-jquery.min.js"></script>
-        <script src="js/validation.min.js"></script>
-        <script src="script.js"></script>
-        <script src="js/sinch.min.js"></script>
-        <link href="datatables/dataTables.bootstrap4.js" rel="stylesheet">
-        <script src="charts/Chart.bundle.min.js"></script>
-        <script src="js/sb-admin-datatables.min.js"></script>
-        <script src="js/sb-admin-charts.min.js"></script>
     </head>
 
     <body style="overflow:hidden;height:100%;">
@@ -143,10 +138,17 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
             </div>
         </div>
         <!-- /.modal -->
+        <script >
+                    
+         </script>
 
         <?php
     include 'admin-script.php';
 ?>
+
+        <script src="js/jquery-1.11.3-jquery.min.js"></script>
+        <script src="js/validation.min.js"></script>
+        <script src="script.js"></script>
     </body>
 
     </html>

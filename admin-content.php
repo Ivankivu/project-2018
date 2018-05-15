@@ -36,7 +36,6 @@
         <div class="col-md-7 ml-0">
             <!-- tab content -->
             <div class="tab-content vertical">
-
                 <!--tab 1-->
                 <div id="home" class="tab-pane fade in show active" role="tabpanel">
                     <div class="card" style="margin-bottom:10px;overflow:none;">
@@ -46,17 +45,17 @@
                         <i class="fa fa-user"></i>&nbsp;
                         Add new Users
                             </div>
-                            <div class="card-body" style="height: 590px;overflow: auto;">
-                            <form class="md-form form-signin form-control-lg " method="post" id="register-form" style="border:none;">
+                            <div class="card-body" style="height: 600px;overflow: none;">
+                            <form class=" form-signin " method="post" id="register-form" style="border:none;">
                                 <!-- error will be showen here -->
                                 <div id="error"></div>
 
                                 <div class="row">
-                                    <div class="col-sx-6 col-md-6 md-form form-group">
+                                    <div class="col-sx-6 col-md-6 col-lg-6 form-group">
                                         <input type="text" class="md-form form-control" placeholder="First Name" name="first_name" id="first_name" />
                                     </div>
 
-                                    <div class="col-sx-6 col-md-6 md-form form-group">
+                                    <div class="col-sx-6 col-md-6 col-lg-6 md-form form-group">
                                         <input type="text" class="md-form form-control" placeholder="Last Name" name="last_name" id="last_name" />
                                     </div>
                                 </div>
@@ -75,11 +74,13 @@
                                     </div>
 
                                     <div class="col-sx-6 col-md-6 md-form form-group">
-                                        <select name="user_role" class="mdb-select colorful-select dropdown-primary" id="user_role" style="width:300px;margin-top:15px;border:none;">
+                                        <select name = "user_role" class="mdb-select colorful-select dropdown-primary" id="user_role" style="width:300px;margin-top:15px;border:none;">
                                             <option name="-1" value="-1" disabled selected>select role</option>
                                             <option name="administrator" value="administrator">Administrator</option>
                                             <option name="agent" value="agent">Agent</option>
+                                        
                                         </select>
+                                        
                                     </div>
                                 </div>
 
@@ -98,10 +99,7 @@
                                         <span class="glyphicon glyphicon-log-in"></span> &nbsp; Add User
                                     </button>
                                 </div>
-
                             </form>
-
-
                             </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -152,7 +150,7 @@
                 <div class="card-header">
                         <i class="fa fa-table"></i>&nbsp;&nbsp;All Employees
                             </div>
-                    <div class="card-body" style="height:590px;overflow: auto;">
+                    <div class="card-body" style="height:600px;overflow: auto;">
                     <table class="table table-sm table-bordered table-condensed table-hover">
                                     <thead class="blue-grey lighten-3">
                                         <tr>

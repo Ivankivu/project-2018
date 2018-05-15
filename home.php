@@ -11,8 +11,12 @@
  */
 require_once 'dbconfig.php'; 
 session_start();
+if (isset($_SESSION['user_id'])){
+
+
 if ($_SESSION['user_role']!=="agent") {
     header("Location: index.php");
+}
 }
 ?>
 

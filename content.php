@@ -10,19 +10,19 @@
                 <li role="presentation" class="nav-item icon-bar">
                     <a class="nav-link active" href="#home" aria-controls="home" role="tab" data-toggle="pill">
                         <i class="fas fa-tasks" aria-hidden="true" style="font-size:30px;"></i>
-                        <span class="ml-1" style="font-size:20px;">Users</span>
+                        <span class="ml-1" style="font-size:20px;">Tasks</span>
                     </a>
                 </li>
                 <li role="presentation" class="nav-item">
                     <a class="nav-link" href="#menu1" aria-controls="menu1" role="tab" data-toggle="pill" style="margin-top:40px;">
                         <i class="fa fa-table ml-2" style="font-size:30px;"></i>
-                        <span style="font-size:20px;">Users</span>
+                        <span style="font-size:20px;">Tables</span>
                     </a>
                 </li>
                 <li role="presentation" class="nav-item" style="margin-top:40px;">
                     <a class="nav-link" href="#menu2" aria-controls="menu2" role="tab" data-toggle="pill" style="margin-top:40px;">
                         <i class="fa fa-users ml-2" style="font-size:30px;"></i>
-                        <span style="font-size:20px;">Users</span>
+                        <span style="font-size:20px;">Units</span>
                     </a>
                 </li>
                 <li role="presentation" class="nav-item" style="margin-top:40px;">
