@@ -28,39 +28,30 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
 
         <!-- favicon -->
         <link rel="shortcut icon" href="images/favicon1.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/tyle.css">
-        <link rel="stylesheet" href="style/style.css">
-        <link href="dash.css" rel="stylesheet" media="screen">
-        <link rel="stylesheet" href="css/mdb.min.css">
-        <link rel="stylesheet" href="css/propic.css">
 
         <!--sample-->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-        <link rel="stylesheet" href="css/clock.css">
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/webcss/css/fontawesome-all.min.css">
+
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
         <!-- Material Design Bootstrap -->
-        <!--link href="css/mdb.css" rel="stylesheet"-->
-        <!--link href="css/mdb.min.css" rel="stylesheet"-->
-        <link href="css/dash.css" rel="stylesheet">
-        <!-- MAIN CSS -->
+        <link href="css/mdb.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
 
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="css/tyle.css" media="screen">
+        <link rel="stylesheet" href="css/dash.css" media="screen">
+        <link rel="stylesheet" href="css/propic.css" media="screen">
+        <link rel="stylesheet" href="css/clock.css" media="screen">
         <style>
             /* Always set the map height explicitly to define the size of the div
          * element that contains the map. */
-
-            #map {
-                height: 100%;
-            }
-
-            /* Optional: Makes the sample page fill the window. */
-
             html,
             body {
                 height: 100%;
@@ -80,20 +71,6 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
                 height: 100px;
                 border: 2px solid #03b1ce;
             }
-
-            .tital {
-                font-size: 16px;
-                font-weight: 500;
-            }
-
-            .bot-border {
-                border-bottom: 1px #f8f8f8 solid;
-                margin: 5px 0 5px 0
-            }
-            #chart-container {
-				width: 640px;
-				height: auto;
-			}
         </style>
     </head>
 
@@ -102,15 +79,15 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
             <!--Navbar-->
             <?php
             include 'navbar.php';
-    ?>
+            ?>
                 <!--/.Navbar-->
         </div>
         <div class="row" style="height:93%;z-index:300px;">
+
             <?php
-
             include 'admin-content.php';
+            ?>
 
-    ?>
         </div>
         <div id="profile-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
             style="display: none;">
@@ -124,9 +101,11 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
                         <div data-dismiss="modal" style="float:right;">x</div>
                     </div>
                     <div class="modal-body">
+
                         <?php
-            include 'User.php';
-                ?>
+                         include 'User.php';
+                         ?>
+
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
@@ -140,15 +119,48 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
         <!-- /.modal -->
         <script >
                     
-         </script>
+        </script>
 
         <?php
-    include 'admin-script.php';
-?>
+         include 'admin-script.php';
+        ?>
 
-        <script src="js/jquery-1.11.3-jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function()
+{  
+ 
+ // code to get all records from table via select box
+ $("#getoptions").change(function()
+ {    
+  var id = $(this).find(":selected").val();
+
+  var dataString = 'action='+ id;
+    
+  $.ajax
+  ({
+   url: 'getoptions.php',
+   data: dataString,
+   cache: false,
+   success: function(r)
+   {
+    $("#display").html(r);
+   } 
+  });
+ })
+ // code to get all records from table via select box
+});
+</script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/validation.min.js"></script>
+        <script src="js/script.js"></script>
         <script src="script.js"></script>
-    </body>
 
+    <!-- Bootstrap tooltips -->
+    <script src="js/popper.min.js "></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="js/bootstrap.min.js "></script>
+    <!-- MDB core JavaScript -->
+    <script src="js/mdb.min.js "></script>
+    </body>
     </html>

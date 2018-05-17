@@ -29,7 +29,7 @@ if (isset($_SESSION['user_session'])!=="" && isset($_SESSION['user_role']) == "a
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <script type="text/javascript" src="js/jquery-1.11.3-jquery.min.js"></script>
     <script type="text/javascript" src="js/validation.min.js"></script>
-    <link href="css/mdb.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="css/mdb.min.css" rel="stylesheet" type="text/css" media="screen">z
     <link href="css/dash.css" rel="stylesheet" type="text/css" media="screen">
 
     <!-- Font Awesome -->
