@@ -36,7 +36,8 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
 
         <!-- Font Awesome -->
         <link rel="stylesheet" href="fontawesome/webcss/css/fontawesome-all.min.css">
-
+        <link rel="stylesheet" href="fontawesome/webcss/css/fa-regular.min.css">
+        <link rel="stylesheet" href="fontawesome/webcss/css/fa-regular-400.ttf">
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 
@@ -72,6 +73,62 @@ if (isset($_SESSION['user_session']) && $_SESSION['user_role']!=="administrator"
                 border: 2px solid #03b1ce;
             }
         </style>
+        <script src="js/Chart.min.js"></script>
+         <script src="js/main.js"></script>
+        <script src="js/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    exportEnabled: true,
+    animationEnabled: true,
+    title:{
+        text: "State Operating Funds"
+    },
+    legend:{
+        cursor: "pointer",
+        itemclick: explodePie
+    },
+    data: [{
+        type: "pie",
+        showInLegend: true,
+        toolTipContent: "{name}: <strong>{y}%</strong>",
+        indexLabel: "{name} - {y}%",
+        dataPoints: [
+            { y: 26, name: "School Aid", exploded: true },
+            { y: 20, name: "Medical Aid" },
+            { y: 5, name: "Debt/Capital" },
+            { y: 3, name: "Elected Officials" },
+            { y: 7, name: "University" },
+            { y: 17, name: "Executive" },
+            { y: 22, name: "Other Local Assistance"}
+        ]
+    }]
+});
+chart.render();
+}
+
+function explodePie (e) {
+    if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+    } else {
+        e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+    }
+    e.chart.render();
+
+}
+</script>
+
     </head>
 
     <body style="overflow:hidden;height:100%;">
@@ -151,11 +208,50 @@ $(document).ready(function()
  // code to get all records from table via select box
 });
 </script>
-        <script src="js/jquery-3.2.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<script>
+(function($)
+{
+    $(document).ready(function()
+    {
+        $.ajaxSetup(
+        {
+            cache: false,
+            beforeSend: function() {
+                $('#myTable').hide();
+                $('#loading').show();
+            },
+            complete: function() {
+                $('#loading').hide();
+                $('#myTable').show();
+            },
+            success: function() {
+                $('#loading').hide();
+                $('#myTable').show();
+            }
+        });
+        var $container = $("#myTable");
+        $container.load("loadTable.php");
+        var refreshId = setInterval(function()
+        {
+            $container.load('loadTable.php');
+        }, 27000);
+    });
+})(jQuery);
+</script>
         <script src="js/validation.min.js"></script>
         <script src="js/script.js"></script>
         <script src="script.js"></script>
-
+<script src="js/jquery.canvasjs.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script src="js/popper.min.js "></script>
     <!-- Bootstrap core JavaScript -->

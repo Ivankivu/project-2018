@@ -23,14 +23,14 @@ $('document').ready(function() {
             },
         },
         messages: {
-            user_name: "please enter user name",
+            user_name: "enter user name",
             password: {
-                required: "please provide a password",
+                required: "password",
                 minlength: "password at least have 8 characters"
             },
-            user_email: "please enter a valid email address",
+            user_email: "email address",
             cpassword: {
-                required: "please retype your password",
+                required: "re-type password",
                 equalTo: "password doesn't match !"
             }
         },

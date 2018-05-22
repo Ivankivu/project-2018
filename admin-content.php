@@ -46,65 +46,131 @@
                         Add new Users
                             </div>
                             <div class="card-body" style="height: 600px;overflow: none;">
-                            <form class=" form-signin " method="post" id="register-form" style="border:none;">
-                                <!-- error will be showen here -->
-                                <div id="error"></div>
-
                                 <div class="row">
-                                    <div class="col-sx-6 col-md-6 col-lg-6 form-group">
-                                        <input type="text" class="md-form form-control" placeholder="First Name" name="first_name" id="first_name" />
-                                    </div>
-
-                                    <div class="col-sx-6 col-md-6 col-lg-6 md-form form-group">
-                                        <input type="text" class="md-form form-control" placeholder="Last Name" name="last_name" id="last_name" />
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-sx-12 col-md-12 md-form form-group">
-                                    <input type="email" class="md-form form-control" placeholder="Email address" name="user_email" id="user_email" />
-                                        <span id="check-e"></span>
+                                    <div class="col-md-4">
+                                         <div class="box box-info">
+                                          <div class="box-body">
+                                         
+                                             <div  align="center"> <img alt="User Pic" src="images/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                                         
-                                    </div>
-                                </div>
+                                                <input id="profile-image-upload" class="hidden" type="file">
+                                                <div style="color:#999;" >click here to change profile image</div>
+                                                <!--Upload Image Js And Css-->
+                                                    <script>
+                                                      $(document).ready(function (e) {
+                                                        $("#register-form").on('submit',(function(e) {
+                                                            e.preventDefault();
+                                                            $.ajax({
+                                                                url: "ajaxupload.php",
+                                                                type: "POST",
+                                                                data:  new FormData(this),
+                                                                contentType: false,
+                                                                cache: false,
+                                                                processData:false,
+                                                                beforeSend : function()
+                                                                {
+                                                                    //$("#preview").fadeOut();
+                                                                    $("#err").fadeOut();
+                                                                },
+                                                                success: function(data)
+                                                                {
+                                                                    if(data=='invalid')
+                                                                    {
+                                                                        // invalid file format.
+                                                                        $("#err").html("Invalid File !").fadeIn();
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        // view uploaded file.
+                                                                        $("#preview").html(data).fadeIn();
+                                                                        $("#form")[0].reset();  
+                                                                    }
+                                                                },
+                                                                error: function(e) 
+                                                                {
+                                                                    $("#err").html(e).fadeIn();
+                                                                }           
+                                                           });
+                                                        }));
+                                                    });          
+                                             </script>  
 
-                                <div class="row">
-                                <div class="col-sx-6 col-md-6 md-form form-group">
-                                    <input type="text" class="md-form form-control" placeholder="Username" name="user_name" id="user_name" />
-                                    </div>
+                                             <script>
+                                                      $(function() {
+                                             $('#profile-image1').on('click', function() {
+                                                $('#profile-image-upload').click();
+                                             });
+                                                });       
+                                             </script>            
+                                     
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         
+                             <div class="col-md-8">
+                                    <form class=" form-signin " method="post" id="register-form" style="border:none;">
+                                        <!-- error will be showen here -->
+                                        <div id="error"></div>
 
-                                    <div class="col-sx-6 col-md-6 md-form form-group">
-                                        <select name = "user_role" class="mdb-select colorful-select dropdown-primary" id="user_role" style="width:300px;margin-top:15px;border:none;">
-                                            <option name="-1" value="-1" disabled selected>select role</option>
-                                            <option name="administrator" value="administrator">Administrator</option>
-                                            <option name="agent" value="agent">Agent</option>
-                                        
-                                        </select>
-                                        
-                                    </div>
-                                </div>
+                                        <div class="row">
+                                            <div class="col-sx-6 col-md-6 col-lg-6 md-form form-group">
+                                                <input type="text" class="md-form form-control" placeholder="First Name" name="first_name" id="first_name" />
+                                            </div>
 
-                                <div class="row">
-                                    <div class="col-sx-6 col-md-6 md-form form-group">
-                                        <input type="password" class="md-form form-control" placeholder="Password" name="password" id="password" />
-                                    </div>
+                                            <div class="col-sx-6 col-md-6 col-lg-6 md-form form-group">
+                                                <input type="text" class="md-form form-control" placeholder="Last Name" name="last_name" id="last_name" />
+                                            </div>
+                                        </div>
 
-                                    <div class="col-sx-6 col-md-6 md-form form-group">
-                                        <input type="password" class="md-form form-control" placeholder="Retype Password" name="cpassword" id="cpassword" />
-                                    </div>
-                                </div>
+                                        <div class="row">
+                                            <div class="col-sx-12 col-md-12 md-form form-group">
+                                            <input type="email" class="md-form form-control" placeholder="Email address" name="user_email" id="user_email" />
+                                                <span id="check-e"></span>
+                                                
+                                            </div>
+                                        </div>
 
-                                <div class="col-sx-6 col-md-6 md-form form-group">
-                                    <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
-                                        <span class="glyphicon glyphicon-log-in"></span> &nbsp; Add User
-                                    </button>
-                                </div>
-                            </form>
+                                        <div class="row">
+                                        <div class="col-sx-6 col-md-6 md-form form-group">
+                                            <input type="text" class="md-form form-control" placeholder="Username" name="user_name" id="user_name" />
+                                            </div>
+
+                                            <div class="col-sx-6 col-md-6 md-form form-group">
+                                                <select name = "user_role" class="mdb-select colorful-select dropdown-primary" id="user_role" style="width:220px;margin-top:15px;border:none;">
+                                                    <option name="-1" value="-1" disabled selected>select role</option>
+                                                    <option name="administrator" value="administrator">Administrator</option>
+                                                    <option name="agent" value="agent">Agent</option>
+                                                
+                                                </select>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sx-6 col-md-6 md-form form-group">
+                                                <input type="password" class="md-form form-control" placeholder="Password" name="password" id="password" />
+                                            </div>
+
+                                            <div class="col-sx-6 col-md-6 md-form form-group">
+                                                <input type="password" class="md-form form-control" placeholder="Retype Password" name="cpassword" id="cpassword" />
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sx-6 col-md-6 md-form form-group">
+                                            <button type="submit" class="btn btn-default" name="btn-save" id="btn-submit">
+                                                <span class="glyphicon glyphicon-log-in"></span> &nbsp; Add User
+                                            </button>
+                                        </div>
+                                    </form>
                             </div>
+                        
+                    </div>
                         </div>
-                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                        <div class="card-footer small text-muted">ETARS</div>
                     </div>
                 </div>
+            </div>
 
                 <!--tab 2-->
                 <div id="menu2" class="tab-pane fade" role="tabpanel">
@@ -116,7 +182,7 @@
                             </div>
                                 <div class="card-body" style="height:590px;overflow: auto;">
 
-
+<div id="chartContainer" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
                                 </div>
                         </div>
                         <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
@@ -136,7 +202,7 @@
 
                                             </div>
                                         </div>
-                                        <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                                        <div class="card-footer small text-muted">ETARS</div>
                                     </div>
                                 </div>
 
@@ -148,10 +214,13 @@
                 <!-- table -->
                 <div class="card panel-default">
                 <div class="card-header">
-                        <i class="fa fa-table"></i>&nbsp;&nbsp;All Employees
-                            </div>
-                    <div class="card-body" style="height:600px;overflow: auto;">
-                    <table class="table table-sm table-bordered table-condensed table-hover">
+                        <i class="fa fa-table"></i>&nbsp;&nbsp;All Employees<input id="myInput" type="text" placeholder="search.." style="float:right;border-radius: 2px;">
+                   
+                    </div>
+                    <div class="card-body"  style="height:590px;overflow: auto;">
+                    
+                     <table class="table table-sm table-bordered table-striped table-condensed table-hover"  style="margin-top: -10px;
+                          border-collapse: collapse;">
                                     <thead class="blue-grey lighten-3">
                                         <tr>
                                             <th class="text-center">ID</th>
@@ -160,27 +229,10 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody>
-                                    <?php
-
-                                            $query = "SELECT * FROM tbl_users";
-                                            $stmt = $db_con->prepare( $query );
-                                            $stmt->execute();
-                                            while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
-                                                ?>
-                                                <tr>
-                                                <td class="text-center"><?php echo $row["user_id"]; ?></td>
-                                                <td class="text-center"><?php echo $row["first_name"]; ?>&nbsp;<?php echo $row["last_name"]; ?></td>
-                                                <td>
-                                                <button data-toggle="modal" data-target="#view-modal" data-id="<?php echo $row["user_id"]; ?>" id="getUser" class="btn btn-sm btn-info"><i class="fas fa-eye" style="align-items:center;"></i> View</button>
-                                                </td>
-                                                </tr>
-                                                <?php
-                                            }
-                                        ?>
+                                    <tbody id="myTable">
+                                   
                                     </tbody>
                                 </table>
-
                         <div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -213,7 +265,7 @@
                         </div>
                         
                     </div>
-                    <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+                    <div class="card-footer small text-muted">ETARS</div>
                 </div>
                 <!-- table ends -->
             </div>

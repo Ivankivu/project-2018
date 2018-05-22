@@ -5,12 +5,12 @@
 body {
     background: #f1f9f9;
     
-    overflow: none;
+    overflow-wrap: inherit;
 
 }
 
 .form-signin {
-    width: 300px;
+    width: 500px;
     padding: 19px 19px 19px;
     margin: 0 auto;
     background-color: #fff;
@@ -33,6 +33,6 @@ body {
 
 
 .navbar-brand {
-    font-family: "Lucida Handwriting";
+    font-family: "Lucida Handwriting", sans-serif;
 }
 

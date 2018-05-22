@@ -7,10 +7,10 @@
         
             <div class="box-body">
                      <div class="col-sm-6">
-                     <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
+                     <div  align="center"> <img alt="User Pic" src="images/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
                 
                 <input id="profile-image-upload" class="hidden" type="file">
-<div style="color:#999;" >click here to change profile image</div>
+            <div style="color:#999;" >click here to change profile image</div>
                 <!--Upload Image Js And Css-->
            <script>
               $(document).ready(function (e) {
@@ -53,7 +53,6 @@
                 
    </script>             
           
-			<script src="js/bootstrap.min.js"></script>
  <script>
               $(function() {
     $('#profile-image1').on('click', function() {
